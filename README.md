@@ -8,6 +8,11 @@ The module is written in **pure lua**, with no other languages.
 
 It has a **flagging system** that lets you flag the observedPlayer when something happens.
 
+# Table of Contents
+1. [Getting Started](https://github.com/ObservationService/ObservationService/blob/main/README.md#getting-started)
+2. [The Observation Functions](https://github.com/ObservationService/ObservationService/blob/main/README.md#the-observation-functions)
+3. [But, What are Observers?](https://github.com/ObservationService/ObservationService/blob/main/README.md#but-what-are-observers)
+
 ## Getting Started
 
 Observing a player is done through this function:
@@ -52,3 +57,16 @@ It calculates how fast the player is going and compares it to the allowed speed.
 It flags by itself if there's no onDetect function.
 
 The player's ping is part of the calculation, ensuring laggy players get a chance to play.
+
+## But, What are Observers?
+Observers are custom classes that hold the observation progress.
+
+You can stop the observer with this function.
+```lua
+Observer:Stop(): ()
+```
+
+If you wan't to avoid false-positives with detections (e.g. Teleportation, Vehicles), you can use this function.
+```lua
+Observer:IgnoreTick(amount: number?)
+```
