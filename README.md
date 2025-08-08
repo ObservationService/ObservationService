@@ -66,7 +66,8 @@ You can stop the observer with this function.
 Observer:Stop(): ()
 ```
 
-If you wan't to avoid false-positives with detections (e.g. Teleportation, Vehicles), you can use this function.
+If you want to avoid false-positives with detections (e.g. Teleportation, Vehicles), you can use this function.
 ```lua
 Observer:IgnoreTick(amount: number?)
 ```
+It adds `amount` ticks to the amount of ticks to be ignored by the observer, which skips that checking.
